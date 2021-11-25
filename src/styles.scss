@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236);
+}
+
+.custom-tool-tip {
+    white-space: pre-line;
+    font-size: 12px;
+}
+
+.mat-tab-labels {
+    background-color: white;
+}
+
+.mat-tab-header {
+    margin-right: 55px;
+}

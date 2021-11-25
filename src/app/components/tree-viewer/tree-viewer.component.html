@@ -1,0 +1,29 @@
+<div class="main-container">
+  <!-- <div class="header">
+    <div>
+      <h2>{{title}}</h2>
+    </div>
+    <div>
+      <div [matTooltip]="tooltip" matTooltipPosition="before" matTooltipClass="custom-tool-tip">
+        <i class="icon" data-feather="help-circle"></i>
+      </div>
+    </div>
+  </div> -->
+  <div *ngIf="!isActive" class="loading-section">
+    <mat-progress-spinner
+      mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+  <div *ngIf="isActive" class="img-zoom-container">
+    <app-photo-viewer [lensAspectRatio]="nodeView?.lensLength" [title]="nodeView?.title" [imageName]="nodeView?.imageName">
+      <app-subtitle *ngIf="nodeView?.subtitleList?.length > 0" [fileItems]="nodeView?.subtitleList" ></app-subtitle>
+    </app-photo-viewer>
+    <!-- <div class="map-container">
+      <div id="lens" class="img-zoom-lens"></div>
+      <img class="mini-container" id="image-map" src="assets/images/migracao_matrimonio.jpg" alt="Ávore Genealógica de Serra de Inácio Pereira" >
+    </div> -->
+    <!-- <div id="image-subframe4" class="result-panel"></div> -->
+    
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+<div class="main-container">
+  <!-- <div class="header">
+    <div>
+      <h2>GENEALOGIA - MIGRAÇÃO E MATRIMÔNIO</h2>
+    </div>
+    <div>
+      <div [matTooltip]="tooltip" matTooltipPosition="before" matTooltipClass="custom-tool-tip">
+        <i class="icon" data-feather="help-circle"></i>
+      </div>
+    </div>
+  </div> -->
+
+  <div *ngIf="isReady" class="loading-section">
+    <mat-progress-spinner
+      mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+
+  <div  class="img-zoom-container">    
+    <div class="map-container">
+      <div #lens id="lens" class="img-zoom-lens"></div>
+      <img #img class="mini-container" id="image-map" src="assets/images/{{imageName}}" [alt]="title" >
+    </div>
+    <div #imageSubframe id="image-subframe" class="result-panel"></div>
+    <!-- <app-subtitle [fileItems]="subtitleImage" ></app-subtitle> -->
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .img-zoom-container {
+        position: relative;
+        height: 100%;
+    }
+      
+    .img-zoom-lens {
+        position: absolute;
+        background-color: #9e3a3a8a;
+        border: 1px solid red;
+        cursor: all-scroll;
+    }
+    
+    .map-container {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+
+        img {
+            width: 100%;
+            height: 100%; 
+        }
+    }
+
+    .mini-container {
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 5px;
+        box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.39);
+    }
+    
+    .result-panel {
+        //flex-grow: auto;
+        border: 1px solid #d4d4d4;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.loading-section {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+
+    mat-progress-spinner {
+        margin-top: 40vh;
+    }
+}

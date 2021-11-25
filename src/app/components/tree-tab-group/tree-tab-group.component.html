@@ -1,0 +1,17 @@
+<mat-tab-group>
+  <mat-tab *ngFor="let tab of tabs; index as i" #myTab="matTab">
+    <ng-template mat-tab-label>
+      <span class="span-title">
+        {{tab.title}}
+      </span>
+      <!-- content -->
+    </ng-template>
+    <div style="height: calc(100vh - 59px); width: 100%;">
+      <app-tree-viewer [isActive]="myTab?.isActive" [nodeView]="tab" [tabIndex]="i"></app-tree-viewer>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<div class="help-icon" [matTooltip]="tooltip" matTooltipPosition="before" matTooltipClass="custom-tool-tip">
+  <i class="icon" data-feather="help-circle"></i>
+</div>
