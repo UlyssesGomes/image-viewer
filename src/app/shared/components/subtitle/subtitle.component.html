@@ -4,13 +4,13 @@
       <span>Legenda</span>
     </div>
     <div (click)="openSubtitle()" class="icon-button" [ngClass]="{'icon-button-opened': this.isOpened }">
-      <img src="{{githubPath}}assets/icons/arrow-up.png" alt="">
+      <img src="assets/icons/arrow-up.png" alt="">
     </div>
   </div>
   <div class="subtitle-content" [ngStyle]="{'height.px': 400}">
     <div *ngFor="let item of fileItems">
       <div class="subtitle-item">
-        <img src="{{githubPath}}assets/images/legenda/{{item.name}}.png" [alt]="item.description" >
+        <img src="assets/images/legenda/{{item.name}}.png" [alt]="item.description" >
         <span class="description">{{item.description}}</span>
       </div>
     </div>
