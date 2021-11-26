@@ -10,7 +10,7 @@
     </div>
   </div> -->
 
-  <div *ngIf="isReady" class="loading-section">
+  <div *ngIf="isReady || loadingImage" class="loading-section">
     <mat-progress-spinner
       mode="indeterminate">
     </mat-progress-spinner>
@@ -19,7 +19,7 @@
   <div  class="img-zoom-container">    
     <div class="map-container">
       <div #lens id="lens" class="img-zoom-lens"></div>
-      <img #img class="mini-container" id="image-map" src="assets/images/{{imageName}}" [alt]="title" >
+      <img #img class="mini-container" id="image-map" src="assets/images/{{imageName}}" [alt]="title" (load)="loaded()">
     </div>
     <div #imageSubframe id="image-subframe" class="result-panel"></div>
     <!-- <app-subtitle [fileItems]="subtitleImage" ></app-subtitle> -->

@@ -31,6 +31,7 @@ export class PhotoViewerComponent implements OnInit, AfterViewInit {
   fixedLens = false;
 
   isReady = true;
+  loadingImage = true;
 
   constructor() { }
 
@@ -48,6 +49,10 @@ export class PhotoViewerComponent implements OnInit, AfterViewInit {
       () => this.loadingElements(),
       500
     );
+  }
+
+  loaded() {
+    this.loadingImage = false;
   }
 
   loadingElements() {
