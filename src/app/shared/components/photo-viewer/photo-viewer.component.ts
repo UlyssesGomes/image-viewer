@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
+import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-photo-viewer',
   templateUrl: './photo-viewer.component.html',
@@ -9,6 +11,8 @@ export class PhotoViewerComponent implements OnInit, AfterViewInit {
 
   @Input() title = '';
   @Input() imageName = '';
+
+  githubPath = environment.githubPath;
 
   // TODO - look a way to get result, lens and img by viewchild.
   // @ViewChild('imageSubframe') result;

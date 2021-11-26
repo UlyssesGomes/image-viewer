@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-subtitle',
@@ -8,6 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SubtitleComponent implements OnInit {
 
   isOpened = true;
+
+  githubPath = environment.githubPath;
 
   @Input() fileItems = [];
 

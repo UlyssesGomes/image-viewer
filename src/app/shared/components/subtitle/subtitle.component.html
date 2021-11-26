@@ -10,7 +10,7 @@
   <div class="subtitle-content" [ngStyle]="{'height.px': 400}">
     <div *ngFor="let item of fileItems">
       <div class="subtitle-item">
-        <img src="assets/images/legenda/{{item.name}}.png" [alt]="item.description" >
+        <img src="{{githubPath}}assets/images/legenda/{{item.name}}.png" [alt]="item.description" >
         <span class="description">{{item.description}}</span>
       </div>
     </div>
